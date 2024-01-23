@@ -19,7 +19,7 @@ N/A
 ## Usage
 You can visit your live site right here: `https://book-collection-6q9c.onrender.com/`
 
-![Demo](assets\image\live-site-demo.png)
+![Demo](assets/image/live-site-demo.png)
 
 ## Contributing 
 N/A
