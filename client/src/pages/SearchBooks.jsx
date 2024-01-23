@@ -84,8 +84,9 @@ const SearchBooks = () => {
       // if (!response.ok) {
       //   throw new Error('something went wrong!');
       // }
-      const { data } = addBook({
-        variables: {...bookToSave}
+      console.log({...bookToSave})
+      const updatedUser = addBook({
+        variables: {input: {...bookToSave}}
       })
 
       // if book successfully saves to user's account, save book id to state

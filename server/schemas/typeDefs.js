@@ -30,8 +30,8 @@ const typeDefs = `
         authors: [String]!, 
         description: String!, 
         title: String!, 
-        image: String!, 
-        link: String!
+        image: String, 
+        link: String
     }
 
     type Mutation {
