@@ -17,7 +17,7 @@ This is a web app that allow you to search for a book title from Google API and 
 N/A
 
 ## Usage
-You can visit your live site right here: `https://book-collection-6q9c.onrender.com/`
+You can visit our live site right here: https://book-collection-6q9c.onrender.com/
 
 ![Demo](assets/image/live-site-demo.png)
 
