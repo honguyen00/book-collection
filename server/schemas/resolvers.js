@@ -6,6 +6,7 @@ const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
+                console.log(context.user._id)
                 return User.findOne({ _id: context.user._id }).populate('savedBooks')
             }
             throw AuthenticationError;
@@ -20,16 +21,19 @@ const resolvers = {
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
-            if(!user) {
-                throw AuthenticationError;
+      
+            if (!user) {
+              throw AuthenticationError;
             }
+      
             const correctPw = await user.isCorrectPassword(password);
-            if(!correctPw) {
-                throw AuthenticationError;
+      
+            if (!correctPw) {
+              throw AuthenticationError;
             }
-
+      
             const token = signToken(user);
-
+      
             return { token, user };
         },
         saveBook: async (parent, args, context) => {
@@ -59,3 +63,5 @@ const resolvers = {
         }
     }
 }
+
+module.exports = resolvers;
